@@ -3,7 +3,8 @@
     --fuentaParrafos: 'Open Sans', sans-serif;
 
     --primario: #3E2EFF;
-    --gris: #e1e1e1;
+    --gris: #979797;
+    --gris-claro: #CBCBCB;
     --blanco: #ffffff;
     --negro: #000000;
 }
@@ -27,8 +28,7 @@ box-sizing: inherit;
  /**Globales**/
 
  .contenedor {
-    max-width: 120rem;
-    width: 90%;
+    width: min(90%, 120rem);
     margin: 0 auto; /*Centrar el contenido horizontalmente ne la pantalla, centrarse por si mismo*/
  }
 
@@ -39,6 +39,7 @@ box-sizing: inherit;
 
 h1,h2,h3,h4 {   
     font-family: var(--fuenteHeading);  /*Fuente para los textos headers, aplica para todos los H´s*/
+    line-height: 1.2;
 }
 
 h1{     
@@ -77,23 +78,48 @@ img{
 
 /**Header**/
 .header{    /*Posiciona una imagen el el header*/
-    background-image: url(../img/banner.jpg);
+    background-image: url(../img/principal1.jpg);
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; /*Centra la imagen si se cambia de tamaño la ventana del navegador*/
 }
 
-.header__texto{
+#header__titulo{
     text-align: center;
-    color: var(--blanco);
+    color: var(--gris);
     margin-top: 5rem;
+}
+
+.iconos{
+    width: 3rem;
+}
+
+.header__texto{
+    text-align: justify;
+    color: var(--negro);
+    margin-top: 5rem;
+    margin-bottom: 5rem;  
+}
+
+.header__texto:last-of-type{
+    border: none;
+    margin-bottom: 0;
 }
 
 @media(min-width: 768px){
     .header__texto{
-        margin-top: 15rem;
+        
+        font-size: 1.6rem;
+        padding: 1rem 20%;
+        display: block;
+        
+        
     }
+}
+
+.barra{
+    padding-top: 2rem;
 }
 
 @media(min-width: 768px){
@@ -104,8 +130,15 @@ img{
     }
 }
 
+/*Cambiar el tamaño del logo de la imagen*/
+
 .logo{
     color: var(--blanco);
+}
+
+#logo__img{
+    padding: 1px;
+    max-height: 130px;
 }
 .logo__nombre{
     font-weight: 400;
@@ -165,4 +198,42 @@ img{
 
 .boton--primario{
     background-color: var(--negro);
+}
+
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso_label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso_info{
+    font-weight: normal;
+}
+
+.widget-curso_label,
+.widget-curso_info{
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--gris-claro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
 }
