@@ -35,6 +35,7 @@ box-sizing: inherit;
 
 *{
     text-decoration: none;  /*Le quita el interlineado a los enlaces*/
+    
 }
 
 h1,h2,h3,h4 {   
@@ -60,6 +61,8 @@ h4{
 
 img{
     max-width: 100%;    /*Tamaño máximo de la imagen de fondo*/
+    max-height: 800px;
+    top: 600px;
 }
 
 /**Utilidades**/
@@ -78,8 +81,8 @@ img{
 
 /**Header**/
 .header{    /*Posiciona una imagen el el header*/
-    background-image: url(../img/principal1.jpg);
-    height: 60rem;
+    background-color: #ffffff;
+    height: 5rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; /*Centra la imagen si se cambia de tamaño la ventana del navegador*/
@@ -92,14 +95,13 @@ img{
 }
 
 .iconos{
-    width: 3rem;
+    width: 2.5rem;
 }
 
 .header__texto{
     text-align: justify;
     color: var(--negro);
-    margin-top: 5rem;
-    margin-bottom: 5rem;  
+    top: auto;
 }
 
 .header__texto:last-of-type{
@@ -109,17 +111,15 @@ img{
 
 @media(min-width: 768px){
     .header__texto{
-        
         font-size: 1.6rem;
         padding: 1rem 20%;
-        display: block;
-        
-        
+        display: block; 
     }
 }
 
 .barra{
-    padding-top: 2rem;
+    margin: 0 auto;
+    padding: 0.2rem 2%;
 }
 
 @media(min-width: 768px){
@@ -138,7 +138,7 @@ img{
 
 #logo__img{
     padding: 1px;
-    max-height: 130px;
+    max-height: 80px;
 }
 .logo__nombre{
     font-weight: 400;
@@ -158,7 +158,45 @@ img{
     display: block; /*Los elementos no esten juntos, esten uno debajo del otro*/
     text-align: center; /*Centrado horizontalmente*/
     font-size: 1.8rem;  /*Tamaño de la letra*/
-    color: var(--blanco);
+    color: var(--gris);
+}
+
+.mySlides{
+    display: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.slideShow-container{
+    max-width: 50px;
+    position: relative;
+    margin: auto;
+}
+
+.dot{
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active{
+    background-color: #717171;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 3.5s;
+}
+
+@keyframes fade{
+    from{opacity: .4;}
+    to {opacity: 1;}
 }
 
 @media(min-width: 768px){

@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Sipnology</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="contenedor">
-            <div class="barra">
-                <a class="logo no-margin centrar-texto" href="index.html">
-                    <img id="logo__img" src="img/LOGO.png" alt="Sipnology"/>
-                </a>
-                <nav class="navegacion">
+                <nav class="navegacion navbar-expand-md">
+                    <div class="barra fixed-top navbar-dark bg-dark">
+                    <a class="logo no-margin centrar-texto" href="index.html">
+                            <img id="logo__img" src="img/LOGO.png" alt="Sipnology"/>
+                        </a>
                     <a href="Quienes_somos.html" class="navegacion__enlace">
                         <img class="iconos" src="img/quienes-somos.png" alt="Sipnology"/>
                         ¿Quienes somos?</a>
@@ -31,18 +33,37 @@
                     <a href="contacto.html" class="navegacion__enlace">
                         <img class="iconos" src="img/soporte.png" alt="Sipnology"/>
                         Contacto</a>
-                </nav>
-            </div>
-        </div>
-        <div class="header__texto">
-            <h2 class="no-margin" id="header__titulo">Sipnology</h2>
-            <p class="no-margin">Somos una empresa mexicana con 10 años de experiencia en el mercado de TI, 
-                con presencia en Ciudad de México, Guadalajara y Monterrey.
-                Desarrollamos e implementamos soluciones integrales en TI del más alto nivel
-                asegurándonos de satisfacer plenamente las necesidades de nuestros clientes.</p>
-        </div>
+                    </div>
+                </nav>    
+            </div>  
     </header>
-
+    <br>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/Servidores.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/Servidores.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/Servidores.jpg" style="width:100%">
+        </div>  
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="header__texto">
+        <h2 class="no-margin" id="header__titulo">Sipnology</h2>
+        <p class="no-margin">Somos una empresa mexicana con 10 años de experiencia en el mercado de TI, 
+            con presencia en Ciudad de México, Guadalajara y Monterrey.
+            Desarrollamos e implementamos soluciones integrales en TI del más alto nivel
+            asegurándonos de satisfacer plenamente las necesidades de nuestros clientes.</p>
+    </div>
     <div class="contenedor contenido-principal">
         <main class="blog">
             <h3>Discovery</h3>
@@ -71,9 +92,15 @@
                     <a href="discovery.html" class="navegacion__enlace">Discovery</a>
                     <a href="servicio.html" class="navegacion__enlace">Servicio</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="contacto.html" class="navegacion__enlace">¿Te gusta nuestro diseño?</a>
+                    <p>Disegned by System Design</p>
                 </nav>
             </div>
         </div>
     </footer>
+        <script src="js/slideshow.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
